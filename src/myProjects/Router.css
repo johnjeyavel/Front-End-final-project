@@ -1,0 +1,89 @@
+@media screen and (max-width:900px){
+    .home{
+     width:max-content;
+ }
+
+ .orouter1{    
+    padding:50%;
+}
+}
+
+
+.home{
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px 2px #555;       
+    font-weight:500;
+    margin: 10px;
+    animation-name:animate;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+}
+
+@keyframes animate{
+0% {
+    opacity:0;
+transform: translateY(-100px);
+}
+} 
+
+.home:hover{
+    color:white;
+    font-weight:900;
+    }
+
+
+/* ORouter */
+
+
+
+.orouter1{
+    background-image: url("C:\Users\Admin\Documents\log in 360\images\RouterImage.jpg");    
+    padding-bottom:19%;
+}
+
+
+.orouter{
+ margin-top: 20%;
+    padding: 5px;
+    margin-left: 50%;
+    border-radius: 10px;
+    font-weight:600;
+    box-shadow: 2px 3px 4px 2px #555; 
+    animation-name:orouteranimate;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+}
+
+@keyframes orouteranimate{
+0% {
+    opacity:0;
+transform: translateX(-100px);
+}
+
+20% {
+    opacity:1;
+transform: translateX(50px);
+}
+
+}
+
+.orouter:hover{
+    background-color: black;
+    color:whitesmoke;
+    font-weight: bolder;
+    font-size: 20px;
+    transition-duration: 2s;
+transition-timing-function:ease-in-out;   
+font-family:inherit;
+}
+
+
+.h1tag{ 
+    font-weight:1000;
+    text-shadow: 5px 5px 5px #555;
+    color: aliceblue;
+    position: relative;
+    top: 18%;
+}

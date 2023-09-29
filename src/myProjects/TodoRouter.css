@@ -1,0 +1,107 @@
+  /* body{
+      background-color: gray;
+  }    */
+  @media screen and (max-width:900px){
+    .todo{
+      width:max-content;
+    }
+
+    }
+
+  .Tspan{
+      background-color: aliceblue;
+      padding-top: 18px;
+      border-radius: 10px;
+      box-shadow: 2px 3px 4px 2px #555;
+  }
+
+  .Tspan1{
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 2px 3px 4px 2px #555;
+    width: auto;
+  }
+
+  .todopadding{
+    background-color: white;
+  position: relative;  
+  left:65%;
+  border-radius: 10px;
+  box-shadow: 2px 3px 4px 2px #555;
+  }
+
+  .ul{
+    list-style-type: disclosure-closed;
+  }
+
+  .Tshadow{
+    text-shadow: 3px 3px 5px #555;
+    color:black;
+    font-family:  ui-rounded;;
+  }
+
+  .Bshadow{
+    box-shadow: 2px 3px 4px 2px #555;     
+  }
+
+
+  .Tnextbtn{
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px 2px #555;
+    padding: 1% ;
+    font-weight: bolder;
+    margin-left:229%;
+
+    animation-name:Tnextanimate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+    
+    @keyframes Tnextanimate{
+    0% {
+        opacity:0;
+    transform: translateX(-100px);
+    }
+    
+    20% {
+        opacity:1;
+    transform: translateX(50px);
+    }
+    
+    }
+
+    .Tnextbtn:hover{
+      color:white;
+      font-weight:1000;
+      }
+
+      
+  .Tpreviousbtn{
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px 2px #555;
+    padding: 1% ;
+    font-weight: bolder;
+    margin-left:-78%;
+
+    animation-name:TPnextanimate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+    
+    @keyframes TPnextanimate{
+    0% {
+        opacity:0;
+    transform: translateX(100px);
+    }
+    
+    20% {
+        opacity:1;
+    transform: translateX(-50px);
+    }
+    
+    }
+
+    .Tpreviousbtn:hover{
+      color:white;
+      font-weight:1000;
+      }

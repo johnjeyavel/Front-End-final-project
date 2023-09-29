@@ -1,0 +1,159 @@
+@media screen and (max-width:400px){
+    .formmedia{
+      width:max-content;
+      padding-bottom:332%;
+    }
+
+    }
+
+    .formmedia{
+    background-image: url("C:\Users\Admin\Documents\log in 360\images\formbackgorund.jpg");
+    padding-bottom:332%;
+    }
+
+
+.openmodal{
+    margin-top: 6%;
+    border-radius: 10px;
+    margin-bottom : 10px;
+    margin-left: 50%;
+    font-weight: bolder;
+    box-shadow: 2px 3px 4px 2px #555;
+
+    animation-name:Onextanimate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+    
+    @keyframes Onextanimate{
+    0% {
+        opacity:0;
+    transform: translateY(-100px);
+    }
+    
+    20% {
+        opacity:1;
+    transform: translateY(25px);
+    }
+    
+    }
+ 
+.openmodal:hover{
+    color:white;
+    font-weight:1000;
+    }
+
+
+    .inputbox{
+        margin-left: 10px;
+        border-radius: 8px;
+        margin-bottom : 10px;
+        font-weight: bolder;
+        box-shadow: 2px 3px 4px 2px #555;
+        text-align: center;
+    }
+     
+
+
+    .btnclose{
+        border-radius: 10px;
+        margin-bottom : 10px;
+        font-weight: bolder;
+        margin-left: 10px;
+        box-shadow: 2px 3px 4px 2px #555;
+    }
+     
+    .btnclose:hover{
+        color:white;
+        font-weight:1000;
+        }
+
+
+    .Fnextbtn{
+        border-radius: 10px;
+        box-shadow: 2px 3px 4px 2px #555;
+        padding: 6px ;
+        font-weight: bolder;
+        margin-left:95%;
+        margin-top:-30px;
+      
+        animation-name:Fnextanimate;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        }
+        
+        @keyframes Fnextanimate{
+        0% {
+            opacity:0;
+        transform: translateX(-100px);
+        }
+        
+        20% {
+            opacity:1;
+        transform: translateX(50px);
+        }
+        
+        }
+      
+        .Fnextbtn:hover{
+          color:white;
+          font-weight:1000;
+          }
+      
+          
+      .Fpreviousbtn{
+        border-radius: 10px;
+        box-shadow: 2px 3px 4px 2px #555;
+        padding:6px ;
+        font-weight: bolder;
+        margin-left:2%;
+        margin-top: 10px;
+      
+        animation-name:TPnextanimate;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        }
+        
+        @keyframes TPnextanimate{
+        0% {
+            opacity:0;
+        transform: translateX(100px);
+        }
+        
+        20% {
+            opacity:1;
+        transform: translateX(-50px);
+        }
+        
+        }
+      
+        .Fpreviousbtn:hover{
+          color:white;
+          font-weight:1000;
+          }
+
+          
+
+          .tablebtn{
+            box-shadow: 2px 3px 4px 2px #555;
+            font-weight: bolder;
+
+            animation-name:FTnextanimate;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            }
+            
+            @keyframes FTnextanimate{
+            0% {
+                opacity:0;
+            transform: translateY(100px);
+            }
+            
+            20% {
+                opacity:1;
+            transform: translateY(-50px);
+            }
+            
+            }
+
+  

@@ -1,0 +1,81 @@
+
+@media screen and (max-width:700px){
+    .bmibody{
+    width:max-content;
+    position:absolute;
+    padding-bottom:332%;
+    }
+    }
+
+    .bmibody{
+      background-image: url("C:\Users\Admin\Documents\log in 360\images\bmiImage.webp"); 
+     padding-top:2%;
+    }
+
+    .span{
+        box-shadow: 2px 3px 4px 2px #555;
+        margin-left:32%;
+        animation-name:bmianimate;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        }
+        
+        @keyframes bmianimate{
+        0% {
+            opacity:0;
+        transform: translateY(-100px);
+        }
+        
+        20% {
+            opacity:1;
+        transform: translateY(50px);
+        }
+        
+        }
+    
+    .span1{
+    text-shadow: 5px 5px 5px #555;
+
+    }
+    
+    .green{
+      color: green;
+    }
+    
+    .orange{
+      color: orange;
+    }
+    
+    .red{
+      color: red;
+    } 
+
+    .nextbtn{
+      border-radius: 10px;
+      box-shadow: 2px 3px 4px 2px #555;
+      padding: 1% ;
+      font-weight: bolder;
+      margin-left: 94%;
+      margin-top: -20px;
+      animation-name:nextanimate;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      }
+      
+      @keyframes nextanimate{
+      0% {
+          opacity:0;
+      transform: translateY(100px);
+      }
+      
+      20% {
+          opacity:1;
+      transform: translateY(50px);
+      }
+      
+      }
+
+      .nextbtn:hover{
+        color:white;
+        font-weight:1000;
+        }
