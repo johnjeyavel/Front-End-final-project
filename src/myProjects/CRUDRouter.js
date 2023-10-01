@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react'
 import Modal from 'react-modal';
-import "./CRUDRouter.css"
+import"./CRUDRouter.css"
 
 const customStyles = {
   content: {
@@ -11,25 +10,29 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor:"gray",
+    backgroundImage: `url(" https://e0.pxfuel.com/wallpapers/92/536/desktop-wallpaper-blue-smoke-background-stock-smokey-thumbnail.jpg")`,
     color:"white",
-    borderRadious:"10px", 
+    borderRadious:"15px", 
+    boxShadow:" 2px 3px 4px 2px #555",
+    textShadow: "5px 5px 5px #555",
+    textAlign:"center",
+    fontWeight:"1000",
+    width:"30%",
   },
 };
 
+const CRUDRouter = () => {
 
-function CRUDRouter() {
   let subtitle;
-
-const[data,setData]=useState("")  
-const[pass,setPass]=useState("")
-const[textarea,setTextarea]=useState("")    
-const[dataVal,setDataVal]=useState([])  
-const[passVal,setPassVal]=useState([])
-const[textareaVal,setTextareaVal]=useState([])
+const[tableData,setTableData]=useState([]); 
+const[editData,setEditData]=useState(false); 
+const[editedData,setEditedData]=useState([]);
+const [input,setInput]=useState({
+name:"",
+email:"",
+})
 
 const [modalIsOpen, setIsOpen] = React.useState(false);
-
 
 function openModal() {
   setIsOpen(true);
@@ -39,93 +42,121 @@ function afterOpenModal() {
   subtitle.style.color = 'white';
 }
 
-function closeModal(e) {
+
+// const handleChange =(e)=>{
+//   setInput({
+//     ...input,
+//     [e.target.name]:e.target.value,
+//   });
+// }
+
+const closeModal=(e)=>{
   setIsOpen(false);
-  
-  e.preventDefault();
-  setDataVal([...dataVal,data]);
-setData("");
-setPassVal([...passVal,pass]);
-setPass("");
-setTextareaVal([...textareaVal,textarea]);
-setTextarea("");
+e.preventDefault();
+if(editData){
+const tempData=tableData;
+Object.assign(tempData[editedData],input)
+setTableData([...tempData])
+// setTableData([...tableData,input])
+setEditData(false)
+setInput({
+  name:"",
+  email:""
+})
+}
+
+else{
+  setTableData([...tableData,input])
+setInput({
+  name:"",
+  email:""
+})
+}
 }
 
 
-// const handleclick=(e)=>{
-
-//   e.preventDefault();
-//   setDataVal([...dataVal,data]);
-// setData("");
-// setPassVal([...passVal,pass]);
-// setPass("");
-// setTextareaVal([...textareaVal,textarea]);
-// setTextarea("");
-// }
 
 
-  return (
-   <>
-<div class="formmedia">
+const handleDelete=(index)=>{
+setTableData((tableData.filter((t,i)=> i!==index)))
+}
 
-         <button ref={(_subtitle) => (subtitle = _subtitle)} onClick={openModal} class="openmodal btn-primary ">Add</button>  
+
+const handleEdit=(index)=>{
+  setIsOpen(true);
+const tempData=tableData[index];
+setInput({name:tempData.name, email:tempData.email})
+setEditData(true)
+setEditedData(index)
+}
+
+
+  return ( 
+    <div class="text-center my-5 openmodal ">
+
+
+ <button ref={(_subtitle) => (subtitle = _subtitle)} onClick={openModal} class="fw-bold btn-primary rounded  UDbtn">Add</button>  
        
-        <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
+       <Modal
+       isOpen={modalIsOpen}
+       onAfterOpen={afterOpenModal}
+       onRequestClose={closeModal}
+       style={customStyles}
+       contentLabel="Example Modal"
+     >
 
-<form  class="d-flex justify-content-evenly my-5  ">
-<input type='text' placeholder='enter your name ' value={data} onChange={(e)=>setData(e.target.value)} class=" inputbox"/>
- <input type='gmail'  placeholder='enter your gmail' value={pass} onChange={(e)=>setPass(e.target.value)} class=" inputbox"/>
-<input type='password' placeholder='enter your password' value={textarea}  onChange={(e)=>setTextarea(e.target.value)} class=" inputbox"/>
-
-{/* <input type='submit' class="btn-primary rounded" /> */}
-<button onClick={closeModal} class="btn-primary btnclose">close</button>
+<form >
+<label for="name" class="p-1 my-1">Name</label><br/>
+<input name='name' value={input.name} required onChange={e=> setInput({...input,name:e.target.value})} class="p-1" /><br/>
+{/* <input name='name' value={input.name} onChange={handleChange} /><br/> */}
+<label for="email" class="p-1 my-1">Gmail</label><br/>
+<input name='email' required value={input.email} onChange={e=> setInput({...input,email:e.target.value}) } class="p-1 "/><br/>
+{/* <input name='email' value={input.email} onChange={handleChange} /><br/> */}
+<button type='submit' onClick={closeModal}  className='btn-primary p-1 mt-3 UDbtn rounded col-3 '>{editData?"Update":"Add"}</button>
 </form>
 
-</Modal>
-<br/>
+</Modal> 
 
-<div class="table-responsive text-center mx-4 ">
-  <table class="table  table-bordered tablebtn ">
-    <thead class="table-dark">
+<div class="table-responsive my-3 mx-5">
+  <table class="table table-bordered border-dark table-primary">
+    <thead class="fw-bold">
       <tr>
+        <th scope="col">Roll No</th>
         <th scope="col">Name</th>
         <th scope="col">Gmail</th>
-        <th scope="col">Password</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
-    <tbody class="table-primary">
+    <tbody>
+   {
+    tableData.map((item,index)=>(
       <tr>
-        <td>{dataVal.map((item)=>(
-          <p>{item}</p>
-))}</td>
-
-
-        <td>{passVal.map((item1)=>(
-<p>{item1}</p>
-))}</td>
-      <td>{textareaVal.map((item2)=>(
-<p>{item2}</p>
-))}</td>
-      </tr> 
-    </tbody >
+        <td>{index}</td>
+        <td>{item.name}</td>
+        <td>{item.email}</td>
+        <td>
+          <button onClick={()=>handleDelete(index)} className='btn-primary mx-2 rounded UDbtn'>delete</button>
+          <button onClick={()=>handleEdit(index)} className='btn-danger mx-2 rounded UDbtn'>edit</button>
+        </td>
+      </tr>
+    ))
+   }
+    </tbody>
   </table>
-  
 </div>
 
 <a href='http://localhost:3000/TodoRouter'>
-<button  class="btn-danger Fpreviousbtn">previous</button></a>
+<button  class="btn-danger  Fpreviousbtn">previous</button></a>
 
 <a href='http://localhost:3000/ThirukkuralRouter'>
-<button  class="btn-success Fnextbtn">Next</button></a> 
+<button  class="btn-success Fnextbtn">Next</button></a>
 
-</div>
-   </>
+
+    </div>
   )
 }
-export default CRUDRouter;
+
+export default CRUDRouter
+
+
+

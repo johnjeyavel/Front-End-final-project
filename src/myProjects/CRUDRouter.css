@@ -6,20 +6,22 @@
 
     }
 
-    .formmedia{
-    background-image: url("C:\Users\Admin\Documents\log in 360\images\formbackgorund.jpg");
-    padding-bottom:332%;
+    .UDbtn{
+        box-shadow: 2px 3px 4px 2px #555;
+        text-shadow: 4px 2px 3px #555;
+        font-weight: 500;
+    }
+    
+    .UDbtn:hover{
+        font-weight: 900;
     }
 
-
-.openmodal{
-    margin-top: 6%;
-    border-radius: 10px;
+.openmodal{   
+    
+     /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ae72ab8-4881-4c31-967f-168da78b0f8b/d4j652p-05eb92ae-6246-436f-a615-183818a37d59.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJhZTcyYWI4LTQ4ODEtNGMzMS05NjdmLTE2OGRhNzhiMGY4YlwvZDRqNjUycC0wNWViOTJhZS02MjQ2LTQzNmYtYTYxNS0xODM4MThhMzdkNTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uFa5Ha_b4Hegr78Kl_FEJSQN-5ZjLQ7pkakMtFnCJuQ");
+    padding-bottom: 30%; */
     margin-bottom : 10px;
-    margin-left: 50%;
-    font-weight: bolder;
-    box-shadow: 2px 3px 4px 2px #555;
-
+    padding-top: 3%;        
     animation-name:Onextanimate;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -33,14 +35,13 @@
     
     20% {
         opacity:1;
-    transform: translateY(25px);
+    transform: translateY(100px);
     }
     
     }
  
 .openmodal:hover{
     color:white;
-    font-weight:1000;
     }
 
 
@@ -106,7 +107,7 @@
         box-shadow: 2px 3px 4px 2px #555;
         padding:6px ;
         font-weight: bolder;
-        margin-left:2%;
+        margin-right:90%;
         margin-top: 10px;
       
         animation-name:TPnextanimate;
