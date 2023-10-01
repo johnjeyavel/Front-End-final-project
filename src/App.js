@@ -6,9 +6,10 @@ const App = () => {
   return (
     <div>
       <Router1/>
-      {/* <CRUDRouter/> */}
+
     </div>
   )
 }
+
 export default App
 
