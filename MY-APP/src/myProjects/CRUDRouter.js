@@ -78,7 +78,7 @@ setInput({
 
 
 const handleDelete=(index)=>{
-setTableData((tableData.filter((t,i)=> i!==index)))
+setTableData((tableData.filter((t,i)=> i !== index)))
 }
 
 

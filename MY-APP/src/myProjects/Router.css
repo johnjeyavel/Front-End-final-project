@@ -3,9 +3,9 @@
      width:max-content;
  }
 
- .orouter1{    
+ /* .orouter1{    
     padding:50%;
-}
+} */
 }
 
 
@@ -39,7 +39,7 @@ transform: translateY(-100px);
 
 
 .orouter1{
-    background-image: url("C:\Users\Admin\Documents\log in 360\images\RouterImage.jpg");    
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/882/531/non_2x/dark-blue-technology-background-free-vector.jpg");    
     padding-bottom:19%;
 }
 

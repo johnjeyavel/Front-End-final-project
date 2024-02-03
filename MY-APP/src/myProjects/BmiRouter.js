@@ -33,7 +33,7 @@ const BmiRouter = () => {
 
   return (
     <div>
-                <div class="bmibody">
+        <div class="bmibody">
   
   <form class="text-center  bg-primary row g-3 col-4 my-5 rounded span" onSubmit={calculate} >
   
